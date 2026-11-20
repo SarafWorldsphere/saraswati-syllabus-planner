@@ -38,7 +38,12 @@ class PlatformData:
 
     def create_board(self, body: BoardCreate) -> Board:
         self._unique_board_code(body.board_code)
-        row = Board(board_code=body.board_code, board_name=body.board_name, region=body.region)
+        row = Board(
+            board_code=body.board_code,
+            board_name=body.board_name,
+            description=body.description,
+            region=body.region,
+        )
         self.db.add(row)
         self.db.commit()
         self.db.refresh(row)

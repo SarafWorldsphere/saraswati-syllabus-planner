@@ -18,7 +18,7 @@ load_dotenv(ROOT / ".env")
 from sqlalchemy import text  # noqa: E402
 
 from app.core.config import settings  # noqa: E402
-from app.db.rls import ensure_platform, install_rls  # noqa: E402
+from app.db.rls import ensure_descriptions, ensure_platform, install_rls  # noqa: E402
 from app.db.session import Base, SessionLocal, engine  # noqa: E402
 from app.models.assessment_block import AssessmentBlock  # noqa: E402
 from app.models.assessment_template import AssessmentTemplate  # noqa: E402
@@ -39,12 +39,22 @@ import app.models  # noqa: E402, F401
 
 BOARD_CODE = "AP_SCERT"
 TENANT = settings.DEV_TENANT_ID
+BOARD_DESCRIPTION = (
+    "State curriculum published by the Andhra Pradesh SCERT for classes 1 to 10. "
+    "A school stores board_id on the year. The screen shows board_name."
+)
+CALENDAR_DESCRIPTION = (
+    "June to April term dates for Andhra Pradesh, 2026-27. Working days sit on each block. "
+    "Any board can recommend this calendar. The calendar row has no board_id. "
+    "The screen shows calendar_name and stores calendar_id."
+)
 
 
 def create_tables() -> None:
     with engine.begin() as connection:
         ensure_platform(connection)
         Base.metadata.create_all(bind=connection)
+        ensure_descriptions(connection)
         install_rls(connection)
 
 
@@ -54,13 +64,21 @@ def seed() -> None:
         # Session-scoped, so the school id survives the commits below.
         # A superuser bypasses the policy anyway. A restricted role does not.
         db.execute(text("SELECT set_config('app.tenant_id', :tenant_id, false)"), {"tenant_id": TENANT})
-        if db.query(Board).filter(Board.board_code == BOARD_CODE).first():
+        existing = db.query(Board).filter(Board.board_code == BOARD_CODE).first()
+        if existing:
+            if not existing.description:
+                existing.description = BOARD_DESCRIPTION
+            calendar = db.query(Calendar).filter(Calendar.calendar_code == "AP_2026_27").first()
+            if calendar is not None and not calendar.description:
+                calendar.description = CALENDAR_DESCRIPTION
+            db.commit()
             print("Sample already loaded. Tables are in place and nothing was duplicated.")
             return
 
         board = Board(
             board_code=BOARD_CODE,
             board_name="Andhra Pradesh SCERT",
+            description=BOARD_DESCRIPTION,
             region="Andhra Pradesh",
         )
         db.add(board)
@@ -84,6 +102,7 @@ def seed() -> None:
         calendar = Calendar(
             calendar_code="AP_2026_27",
             calendar_name="Andhra academic calendar 2026-27",
+            description=CALENDAR_DESCRIPTION,
             academic_year="2026-27",
             region="Andhra Pradesh",
         )

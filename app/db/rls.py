@@ -36,6 +36,12 @@ def ensure_platform(connection) -> None:
     connection.execute(text(TENANT_FUNCTION))
 
 
+def ensure_descriptions(connection) -> None:
+    # create_all does not add a column to a table that already exists.
+    connection.execute(text("ALTER TABLE platform.board ADD COLUMN IF NOT EXISTS description text"))
+    connection.execute(text("ALTER TABLE platform.calendar ADD COLUMN IF NOT EXISTS description text"))
+
+
 def install_rls(connection) -> None:
     ensure_platform(connection)
     for table in SCHOOL_TABLES:

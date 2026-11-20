@@ -11,6 +11,8 @@ from app.schemas.common import ApiModel
 class BoardCreate(ApiModel):
     board_code: str = Field(max_length=30)
     board_name: str = Field(max_length=150)
+    # Long text. The screen shows board_name and stores board_id.
+    description: Optional[str] = None
     region: Optional[str] = None
 
 
@@ -46,6 +48,8 @@ class CalendarCreate(ApiModel):
     # A calendar is not owned by a board. Link it afterwards.
     calendar_code: str = Field(max_length=40)
     calendar_name: str = Field(max_length=150)
+    # Long text. The screen shows calendar_name and stores calendar_id.
+    description: Optional[str] = None
     academic_year: str = Field(max_length=9)
     region: Optional[str] = None
 

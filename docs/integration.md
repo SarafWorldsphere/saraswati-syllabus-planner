@@ -54,7 +54,7 @@ Headmaster and School Admin write the plan. Faculty reads it and records the day
 
 1. `POST /boards`, grades, subjects, `POST /calendars`, blocks, then `POST /boards/{board_id}/calendars` to recommend that calendar. A calendar body has no `board_id`. Two boards can share one set of dates.
 2. `POST /syllabus-items`. A topic that does not fit in one block sends `spans`: segment 1 is `planned`, later segments are `continues`. Omit `spans` and the server splits the topic across the board's default calendar.
-3. `POST /academic-year` with both `board_id` (what is taught) and `calendar_id` (when). Opening a new active year closes the previous one.
+3. `POST /academic-year` with both `board_id` (what is taught) and `calendar_id` (when). Those values are numbers. The dropdown shows `board_name` and `calendar_name`. `description` on each row is the longer text under the name. Opening a new active year closes the previous one.
 4. `POST /holidays` for days this school is closed that the calendar did not list.
 5. `POST /syllabus-plan/generate` with `class_id` and `subject_id`. Existing rows are left alone. The response is `{created, skipped}`. Without `class_master` and `subject_master` in this database, both ids are required.
 6. `GET /syllabus-plan/unmatched` for topics whose `chapter_id` is still null. When `chapter_master` exists, the row includes a suggested chapter. `PATCH /syllabus-plan/{plan_id}` saves the match.
