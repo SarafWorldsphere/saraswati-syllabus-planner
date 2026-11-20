@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
   <rect width="960" height="520" fill="#f4f4f4"/>
   <text x="32" y="40" font-family="ui-sans-serif, sans-serif" font-size="20" fill="#111">Coverage</text>
-  <text x="32" y="62" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#555">/admin/coverage · Headmaster and School Admin · GET /coverage</text>
+  <text x="32" y="62" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#555">/admin/coverage  -  Headmaster and School Admin  -  GET /coverage</text>
 
   <rect x="24" y="84" width="200" height="36" rx="4" fill="#e7f6ee" stroke="#1b7f4a"/>
-  <text x="36" y="107" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#1b7f4a">on_track · 90% and above</text>
+  <text x="36" y="107" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#1b7f4a">on_track  -  90% and above</text>
   <rect x="236" y="84" width="180" height="36" rx="4" fill="#fff6e8" stroke="#b86e00"/>
-  <text x="248" y="107" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#b86e00">behind · 70 to 89</text>
+  <text x="248" y="107" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#b86e00">behind  -  70 to 89</text>
   <rect x="428" y="84" width="170" height="36" rx="4" fill="#fdecea" stroke="#b42318"/>
-  <text x="440" y="107" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#b42318">critical · below 70</text>
+  <text x="440" y="107" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#b42318">critical  -  below 70</text>
 
   <rect x="24" y="140" width="912" height="250" rx="8" fill="#fff" stroke="#ccc"/>
   <text x="44" y="172" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#666">class_id</text>
@@ -53,5 +53,5 @@
   <rect x="24" y="410" width="912" height="84" rx="8" fill="#fff" stroke="#ccc"/>
   <text x="44" y="440" font-family="ui-sans-serif, sans-serif" font-size="14" fill="#111">One class and subject</text>
   <text x="44" y="464" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#333">GET /coverage/detail?class_id=1&amp;subject_id=1</text>
-  <text x="520" y="464" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#333">Real Numbers · 0 of 12 · open</text>
+  <text x="520" y="464" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#333">Real Numbers  -  0 of 12  -  open</text>
 </svg>

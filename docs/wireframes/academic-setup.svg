@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="760" viewBox="0 0 880 760">
   <rect width="880" height="760" fill="#f4f4f4"/>
   <text x="32" y="40" font-family="ui-sans-serif, sans-serif" font-size="20" fill="#111">Academic setup</text>
-  <text x="32" y="62" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#555">/admin/academic-setup · School Admin and Headmaster</text>
+  <text x="32" y="62" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#555">/admin/academic-setup  -  School Admin and Headmaster</text>
 
   <rect x="24" y="84" width="832" height="250" rx="8" fill="#fff" stroke="#ccc"/>
   <text x="44" y="114" font-family="ui-sans-serif, sans-serif" font-size="15" fill="#111">Year</text>
-  <text x="44" y="136" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">POST /academic-year · a calendar has no board_id</text>
+  <text x="44" y="136" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">POST /academic-year  -  a calendar has no board_id</text>
 
   <text x="44" y="170" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">board_id</text>
   <rect x="44" y="178" width="360" height="36" rx="4" fill="#fafafa" stroke="#bbb"/>
@@ -32,7 +32,7 @@
 
   <rect x="24" y="350" width="832" height="210" rx="8" fill="#fff" stroke="#ccc"/>
   <text x="44" y="380" font-family="ui-sans-serif, sans-serif" font-size="15" fill="#111">Local holidays</text>
-  <text x="44" y="402" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">POST /holidays · DELETE /holidays/{holiday_id}</text>
+  <text x="44" y="402" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">POST /holidays  -  DELETE /holidays/{holiday_id}</text>
 
   <text x="44" y="434" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">holiday_date</text>
   <rect x="44" y="442" width="180" height="36" rx="4" fill="#fafafa" stroke="#bbb"/>
@@ -43,12 +43,12 @@
   <rect x="644" y="442" width="168" height="36" rx="4" fill="#fff" stroke="#111"/>
   <text x="680" y="465" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">Add holiday</text>
 
-  <text x="44" y="510" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#333">2026-08-15 · Independence Day</text>
+  <text x="44" y="510" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#333">2026-08-15  -  Independence Day</text>
   <text x="760" y="510" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#555">Remove</text>
 
   <rect x="24" y="576" width="832" height="150" rx="8" fill="#fff" stroke="#ccc"/>
   <text x="44" y="606" font-family="ui-sans-serif, sans-serif" font-size="15" fill="#111">Generate plan</text>
-  <text x="44" y="628" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">POST /syllabus-plan/generate · returns created and skipped</text>
+  <text x="44" y="628" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">POST /syllabus-plan/generate  -  returns created and skipped</text>
   <text x="44" y="662" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">class_id</text>
   <rect x="44" y="670" width="160" height="36" rx="4" fill="#fafafa" stroke="#bbb"/>
   <text x="56" y="693" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">1</text>

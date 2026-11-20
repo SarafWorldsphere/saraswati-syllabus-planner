@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460">
   <rect width="960" height="460" fill="#f4f4f4"/>
   <text x="32" y="40" font-family="ui-sans-serif, sans-serif" font-size="20" fill="#111">Teacher alerts</text>
-  <text x="32" y="62" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#555">/admin/teacher-alerts · Headmaster and School Admin · GET /teacher-alerts</text>
+  <text x="32" y="62" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#555">/admin/teacher-alerts  -  Headmaster and School Admin  -  GET /teacher-alerts</text>
 
   <rect x="24" y="84" width="912" height="72" rx="8" fill="#fff" stroke="#ccc"/>
   <text x="44" y="114" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">A streak is consecutive working days with a period and an empty teaching log.</text>

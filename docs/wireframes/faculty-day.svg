@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720">
   <rect width="960" height="720" fill="#f4f4f4"/>
   <text x="32" y="40" font-family="ui-sans-serif, sans-serif" font-size="20" fill="#111">Faculty day</text>
-  <text x="32" y="62" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#555">/faculty/today · Faculty · no X-Class-Id · each period carries class_id</text>
+  <text x="32" y="62" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#555">/faculty/today  -  Faculty  -  no X-Class-Id  -  each period carries class_id</text>
 
   <rect x="24" y="84" width="912" height="250" rx="8" fill="#fff" stroke="#ccc"/>
   <text x="44" y="114" font-family="ui-sans-serif, sans-serif" font-size="15" fill="#111">Today</text>
-  <text x="44" y="136" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">GET /teaching-log/today · POST /teaching-log · status is taught, partly, or not_taken</text>
+  <text x="44" y="136" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">GET /teaching-log/today  -  POST /teaching-log  -  status is taught, partly, or not_taken</text>
 
   <text x="44" y="172" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#666">period_no</text>
   <text x="150" y="172" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#666">class_id</text>
@@ -31,14 +31,14 @@
   <rect x="24" y="352" width="440" height="200" rx="8" fill="#fff" stroke="#ccc"/>
   <text x="44" y="382" font-family="ui-sans-serif, sans-serif" font-size="15" fill="#111">My plan</text>
   <text x="44" y="404" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">GET /syllabus-plan/mine?class_id=1&amp;subject_id=1</text>
-  <text x="44" y="444" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">1 · Real Numbers · 12 periods</text>
-  <text x="44" y="468" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">July planned · August continues · version_no 1</text>
+  <text x="44" y="444" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">1  -  Real Numbers  -  12 periods</text>
+  <text x="44" y="468" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">July planned  -  August continues  -  version_no 1</text>
   <text x="44" y="500" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">Read only. Faculty cannot edit the plan.</text>
 
   <rect x="480" y="352" width="456" height="200" rx="8" fill="#fff" stroke="#ccc"/>
   <text x="500" y="382" font-family="ui-sans-serif, sans-serif" font-size="15" fill="#111">Current lesson</text>
   <text x="500" y="404" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">POST /lesson-plans/current</text>
-  <text x="500" y="440" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">class_id 1 · subject_id 1</text>
+  <text x="500" y="440" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">class_id 1  -  subject_id 1</text>
   <text x="500" y="468" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">No chapter box. The server picks Real Numbers.</text>
   <rect x="500" y="490" width="220" height="36" rx="4" fill="#111"/>
   <text x="528" y="513" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#fff">Plan for current topic</text>
