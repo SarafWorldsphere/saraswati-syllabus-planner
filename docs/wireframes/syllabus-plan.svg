@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640">
+  <rect width="960" height="640" fill="#f4f4f4"/>
+  <text x="32" y="40" font-family="ui-sans-serif, sans-serif" font-size="20" fill="#111">Syllabus plan</text>
+  <text x="32" y="62" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#555">/admin/syllabus-plan · School Admin and Headmaster · start with matching</text>
+
+  <rect x="24" y="84" width="912" height="300" rx="8" fill="#fff" stroke="#ccc"/>
+  <text x="44" y="114" font-family="ui-sans-serif, sans-serif" font-size="15" fill="#111">Unmatched topics</text>
+  <text x="44" y="136" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">GET /syllabus-plan/unmatched · PATCH sends version_no · stale version is 409</text>
+
+  <text x="44" y="170" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#666">topic_name</text>
+  <text x="220" y="170" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#666">suggested chapter</text>
+  <text x="420" y="170" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#666">chapter_id</text>
+  <text x="580" y="170" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#666">planned_periods</text>
+  <text x="710" y="170" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#666">plan_seq</text>
+  <text x="800" y="170" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#666">is_active</text>
+
+  <text x="44" y="206" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">Real Numbers</text>
+  <text x="220" y="206" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#555">suggested_chapter_name</text>
+  <rect x="420" y="186" width="140" height="32" rx="4" fill="#fafafa" stroke="#bbb"/>
+  <text x="432" y="207" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">Choose</text>
+  <rect x="580" y="186" width="100" height="32" rx="4" fill="#fafafa" stroke="#bbb"/>
+  <text x="616" y="207" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">12</text>
+  <rect x="700" y="186" width="70" height="32" rx="4" fill="#fafafa" stroke="#bbb"/>
+  <text x="728" y="207" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">1</text>
+  <rect x="800" y="186" width="100" height="32" rx="4" fill="#111"/>
+  <text x="832" y="207" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#fff">On</text>
+
+  <text x="44" y="248" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">version_no 1 · July planned, August continues · block_name is the first segment</text>
+  <rect x="760" y="268" width="140" height="36" rx="4" fill="#111"/>
+  <text x="808" y="291" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#fff">Save match</text>
+  <text x="44" y="292" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">Turning Off sets is_active false. The row stays.</text>
+
+  <text x="44" y="348" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#666">History</text>
+  <text x="120" y="348" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">GET /syllabus-plan/{plan_id}/audit</text>
+
+  <rect x="24" y="404" width="912" height="200" rx="8" fill="#fff" stroke="#ccc"/>
+  <text x="44" y="434" font-family="ui-sans-serif, sans-serif" font-size="15" fill="#111">Topic the board never listed</text>
+  <text x="44" y="456" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">POST /syllabus-plan · source becomes admin · syllabus_item_id is empty</text>
+
+  <text x="44" y="490" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">topic_name</text>
+  <rect x="44" y="498" width="280" height="36" rx="4" fill="#fafafa" stroke="#bbb"/>
+  <text x="56" y="521" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#999">Chapter name</text>
+  <text x="344" y="490" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">block_id</text>
+  <rect x="344" y="498" width="140" height="36" rx="4" fill="#fafafa" stroke="#bbb"/>
+  <text x="356" y="521" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">July</text>
+  <text x="504" y="490" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">planned_periods</text>
+  <rect x="504" y="498" width="80" height="36" rx="4" fill="#fafafa" stroke="#bbb"/>
+  <text x="534" y="521" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">6</text>
+  <text x="604" y="490" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">plan_seq</text>
+  <rect x="604" y="498" width="70" height="36" rx="4" fill="#fafafa" stroke="#bbb"/>
+  <text x="630" y="521" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">2</text>
+  <rect x="700" y="498" width="196" height="36" rx="4" fill="#111"/>
+  <text x="748" y="521" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#fff">Add topic</text>
+  <text x="44" y="566" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">Also send class_id and subject_id. Faculty cannot call this.</text>
+</svg>

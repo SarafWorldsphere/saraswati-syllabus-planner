@@ -1,6 +1,6 @@
 # Integrating the Syllabus Planner
 
-This service is an HTTP API. The admin, headmaster, and teacher screens do not live here. A dashboard calls `http://<host>:8010/api/v1`. Swagger at `/docs` is the field-level contract. This page is how to wire a caller.
+This service is an HTTP API. The admin, headmaster, and teacher screens do not live here. A dashboard calls `http://<host>:8010/api/v1`. Swagger at `/docs` is the field-level contract. This page is how to wire a caller. Screen layouts are in [docs/wireframes](wireframes/README.md).
 
 Python 3.12 is required for the pinned dependencies. Python 3.14 cannot build them.
 

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460">
+  <rect width="960" height="460" fill="#f4f4f4"/>
+  <text x="32" y="40" font-family="ui-sans-serif, sans-serif" font-size="20" fill="#111">Teacher alerts</text>
+  <text x="32" y="62" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#555">/admin/teacher-alerts · Headmaster and School Admin · GET /teacher-alerts</text>
+
+  <rect x="24" y="84" width="912" height="72" rx="8" fill="#fff" stroke="#ccc"/>
+  <text x="44" y="114" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">A streak is consecutive working days with a period and an empty teaching log.</text>
+  <text x="44" y="136" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#333">missed_days is counted on this call. not_taken is a mark, so it ends the run. The row appears at 3 days.</text>
+
+  <rect x="24" y="172" width="912" height="250" rx="8" fill="#fff" stroke="#ccc"/>
+  <text x="44" y="204" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#666">teacher_id</text>
+  <text x="200" y="204" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#666">first_missed_date</text>
+  <text x="380" y="204" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#666">missed_days</text>
+  <text x="510" y="204" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#666">status</text>
+  <text x="680" y="204" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#666">action</text>
+
+  <line x1="44" y1="218" x2="900" y2="218" stroke="#eee"/>
+  <text x="44" y="250" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">teacher-42</text>
+  <text x="200" y="250" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">2026-11-16</text>
+  <text x="400" y="250" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">3</text>
+  <rect x="510" y="232" width="88" height="26" rx="4" fill="#fdecea"/>
+  <text x="534" y="250" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#b42318">open</text>
+  <rect x="680" y="230" width="110" height="30" rx="4" fill="#fff" stroke="#111"/>
+  <text x="694" y="250" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#111">Acknowledge</text>
+  <rect x="800" y="230" width="90" height="30" rx="4" fill="#111"/>
+  <text x="828" y="250" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#fff">Close</text>
+
+  <text x="44" y="300" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">PATCH /teacher-alerts/{alert_id}</text>
+  <text x="44" y="322" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">status: open, acknowledged, or closed. closed_reason is optional. closed_by comes from the token.</text>
+  <text x="44" y="360" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">If she marks tonight, missed_days becomes 0 and the row stays until someone closes it.</text>
+  <text x="44" y="382" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">No timetable in this database means the list is empty. Do not invent misses.</text>
+</svg>

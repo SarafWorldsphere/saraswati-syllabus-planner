@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="760" viewBox="0 0 880 760">
+  <rect width="880" height="760" fill="#f4f4f4"/>
+  <text x="32" y="40" font-family="ui-sans-serif, sans-serif" font-size="20" fill="#111">Academic setup</text>
+  <text x="32" y="62" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#555">/admin/academic-setup · School Admin and Headmaster</text>
+
+  <rect x="24" y="84" width="832" height="250" rx="8" fill="#fff" stroke="#ccc"/>
+  <text x="44" y="114" font-family="ui-sans-serif, sans-serif" font-size="15" fill="#111">Year</text>
+  <text x="44" y="136" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">POST /academic-year · a calendar has no board_id</text>
+
+  <text x="44" y="170" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">board_id</text>
+  <rect x="44" y="178" width="360" height="36" rx="4" fill="#fafafa" stroke="#bbb"/>
+  <text x="56" y="201" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">Andhra Pradesh SCERT</text>
+
+  <text x="428" y="170" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">calendar_id</text>
+  <rect x="428" y="178" width="360" height="36" rx="4" fill="#fafafa" stroke="#bbb"/>
+  <text x="440" y="201" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">Andhra academic calendar 2026-27</text>
+
+  <text x="44" y="236" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">academic_year</text>
+  <rect x="44" y="244" width="200" height="36" rx="4" fill="#fafafa" stroke="#bbb"/>
+  <text x="56" y="267" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">2026-27</text>
+
+  <text x="264" y="236" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">start_date</text>
+  <rect x="264" y="244" width="160" height="36" rx="4" fill="#fafafa" stroke="#bbb"/>
+  <text x="276" y="267" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">2026-06-15</text>
+
+  <text x="444" y="236" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">end_date</text>
+  <rect x="444" y="244" width="160" height="36" rx="4" fill="#fafafa" stroke="#bbb"/>
+  <text x="456" y="267" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">2027-04-30</text>
+
+  <rect x="640" y="244" width="148" height="36" rx="4" fill="#111"/>
+  <text x="674" y="267" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#fff">Save year</text>
+
+  <rect x="24" y="350" width="832" height="210" rx="8" fill="#fff" stroke="#ccc"/>
+  <text x="44" y="380" font-family="ui-sans-serif, sans-serif" font-size="15" fill="#111">Local holidays</text>
+  <text x="44" y="402" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">POST /holidays · DELETE /holidays/{holiday_id}</text>
+
+  <text x="44" y="434" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">holiday_date</text>
+  <rect x="44" y="442" width="180" height="36" rx="4" fill="#fafafa" stroke="#bbb"/>
+  <text x="56" y="465" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">2026-08-15</text>
+  <text x="244" y="434" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">reason</text>
+  <rect x="244" y="442" width="380" height="36" rx="4" fill="#fafafa" stroke="#bbb"/>
+  <text x="256" y="465" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">Independence Day</text>
+  <rect x="644" y="442" width="168" height="36" rx="4" fill="#fff" stroke="#111"/>
+  <text x="680" y="465" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">Add holiday</text>
+
+  <text x="44" y="510" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#333">2026-08-15 · Independence Day</text>
+  <text x="760" y="510" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#555">Remove</text>
+
+  <rect x="24" y="576" width="832" height="150" rx="8" fill="#fff" stroke="#ccc"/>
+  <text x="44" y="606" font-family="ui-sans-serif, sans-serif" font-size="15" fill="#111">Generate plan</text>
+  <text x="44" y="628" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#555">POST /syllabus-plan/generate · returns created and skipped</text>
+  <text x="44" y="662" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">class_id</text>
+  <rect x="44" y="670" width="160" height="36" rx="4" fill="#fafafa" stroke="#bbb"/>
+  <text x="56" y="693" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">1</text>
+  <text x="224" y="662" font-family="ui-sans-serif, sans-serif" font-size="12" fill="#333">subject_id</text>
+  <rect x="224" y="670" width="160" height="36" rx="4" fill="#fafafa" stroke="#bbb"/>
+  <text x="236" y="693" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#111">1</text>
+  <rect x="640" y="670" width="172" height="36" rx="4" fill="#111"/>
+  <text x="668" y="693" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#fff">Generate plan</text>
+</svg>
