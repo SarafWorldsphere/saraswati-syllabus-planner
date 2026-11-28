@@ -67,6 +67,69 @@ class AlertService:
         self.db.commit()
         return self._existing(include_closed=False)
 
+    def mine(self) -> list[dict]:
+        """
+        This teacher's own open marking alerts.
+
+        list_open() sweeps every teacher and is for the headmaster; a teacher
+        may only see their own, so this computes the streak for the caller
+        alone. Same rule, same holiday handling — the only difference is who
+        it looks at.
+
+        It raises the alert as well as reading it, for the same reason
+        list_open does: nothing runs this on a schedule, so the streak is
+        worked out when someone asks. A teacher opening their dashboard is
+        therefore the first thing that can tell them they have fallen behind.
+        """
+        teacher_id = self.caller.user_id
+        if not teacher_id:
+            return []
+
+        year = self.years.active()
+        holidays = {
+            row.holiday_date
+            for row in self.db.query(SchoolHoliday)
+            .filter(SchoolHoliday.school_year_id == year.school_year_id)
+            .all()
+        }
+
+        # Without a timetable there is no way to tell a free day from a
+        # missed one, so say nothing rather than accuse everybody.
+        if self.plans._has_table("timetable"):
+            streak_start, missed = self._streak(teacher_id, date.today(), holidays, year.start_date)
+            if missed >= STREAK_LIMIT and streak_start is not None:
+                existing = (
+                    self.db.query(MarkingReview)
+                    .filter(
+                        MarkingReview.tenant_id == self.caller.tenant_id,
+                        MarkingReview.teacher_id == str(teacher_id),
+                        MarkingReview.streak_started_on == streak_start,
+                    )
+                    .first()
+                )
+                if existing is None:
+                    self.db.add(
+                        MarkingReview(
+                            tenant_id=self.caller.tenant_id,
+                            teacher_id=str(teacher_id),
+                            streak_started_on=streak_start,
+                            status="open",
+                        )
+                    )
+                    self.db.commit()
+
+        rows = (
+            self.db.query(MarkingReview)
+            .filter(
+                MarkingReview.tenant_id == self.caller.tenant_id,
+                MarkingReview.teacher_id == str(teacher_id),
+                MarkingReview.status != "closed",
+            )
+            .order_by(MarkingReview.raised_at.desc())
+            .all()
+        )
+        return [self._out(row, self._missed_now(row)) for row in rows]
+
     def update(self, alert_id: int, new_status: str, reason: str | None) -> dict:
         if new_status not in {"open", "acknowledged", "closed"}:
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="status must be open, acknowledged, or closed")
